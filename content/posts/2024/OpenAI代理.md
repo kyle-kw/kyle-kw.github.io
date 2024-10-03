@@ -9,7 +9,7 @@ tags = ["OpenAI", "Claude", "Proxy"]
 
 解决方式有很多，基本思路是搭建一个代理服务，让代理“代替”请求。
 
-下面就介绍一种比较简单免费的方式，个人使用量不大，可以很好的转发。
+下面就介绍一种简单免费的方式，个人使用量不大，可以很好的转发。
 
 ### 腾讯云函数
 
@@ -19,7 +19,7 @@ tags = ["OpenAI", "Claude", "Proxy"]
 
 之前折腾了[Cloudflare Workers](https://developers.cloudflare.com/workers)，Cloudflare家的云函数，个人也是免费，而且可以自定义域名。
 但是有一个致命的问题，函数运行的服务器是按照访问访问的ip来决定的，无法手动指定（我暂时没有找到），由于代理肯定是国内访问的，那么workers出口就是距离最近的香港
-（可以访问https://<you-domain>/cdn-cgi/trace查看当前的三字码）
+（可以访问https://\<you-domain\>/cdn-cgi/trace查看当前的三字码），
 而香港又被禁止访问api。所以就放弃了这个方案。
 
 下面使用腾讯云函数，它可以指定函数的运行地区，且可以固定ip，这对api访问很友好。

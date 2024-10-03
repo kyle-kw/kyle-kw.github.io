@@ -1,0 +1,75 @@
+baseURL: https://kyle-kw.github.io/
+languageCode: en-us
+title: Kyle's Blog
+theme: PaperMod
+
+pagination:
+  pagerSize: 10
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+params:
+  env: production
+  title: Blog
+  description: "Kyle's Blog. "
+  keywords: [Blog, PaperMod]
+  defaultTheme: auto
+  disableThemeToggle: false
+  social: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  enableInlineShortcodes: true
+  disableSpecial1stPost: true
+  UseHugoToc: true
+  comments: true
+  assets:
+    disableHLJS: true
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+        - name: RSS
+          url: https://kyle-kw.github.io/index.xml
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+services:
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

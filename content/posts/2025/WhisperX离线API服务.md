@@ -260,5 +260,5 @@ services:
               capabilities: [gpu]
 ```
 
-![WhisperX API测试](images/WhisperX测试.png)
+![WhisperX API测试](/images/WhisperX测试.png)
 

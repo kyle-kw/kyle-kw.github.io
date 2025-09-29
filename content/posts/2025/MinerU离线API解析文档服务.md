@@ -129,4 +129,4 @@ services:
               capabilities: [gpu]
 ```
 
-![MinerU](images/MinerU测试.png)
+![MinerU](/images/MinerU测试.png)
